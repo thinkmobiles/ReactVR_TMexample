@@ -34,6 +34,12 @@ function onVRMessage(e) {
       window.playerCamera.updateProjectionMatrix();
     }
     break;
+    case 'sceneLoadStart':
+      document.getElementById('loader').style.display = 'block';
+    break;
+    case 'sceneLoadEnd':
+      document.getElementById('loader').style.display = 'none';
+    break;
     default:
     return;
   }
